@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles.css';
 
 import { Posts } from '../../components/Posts';
@@ -6,7 +6,7 @@ import { loadPosts} from '../../utils/load-posts'
 
 
 
-export class Home extends Component {
+export class Home extends React.Component {
   state = {
     posts: [],
   };
@@ -14,7 +14,6 @@ export class Home extends Component {
   async componentDidMount() {
     await this.loadPosts();
   }
-
 
   loadPosts = async () => {
     const postsAndPhotos = await loadPosts();
