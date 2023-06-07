@@ -11,7 +11,8 @@ class Home extends Component {
     allPosts: [],
     page: 0,
     postsPerPage: 15,
-    isButtonDisabled: false
+    searchValue:''
+
   };
 
   async componentDidMount() {
@@ -38,13 +39,19 @@ class Home extends Component {
     posts.push(...nextPosts);
     this.setState({posts, page: nextPage})
   }
-
+  handleChange = (e) => {
+    const {value} = e.target;
+    this.setState({searchValue: value})
+  }
   render() {
     const { posts, page, postsPerPage, allPosts } = this.state;
     const noMorePosts = page + postsPerPage >= allPosts.length;
-return (
+    return (
     <section className="container">
-     
+      <input 
+      onChange={this.handleChange}
+      value={this.state.searchValue}
+      type="search"/> 
       <Posts posts={posts} />
       
       <Button
