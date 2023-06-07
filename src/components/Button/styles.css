@@ -1,0 +1,17 @@
+.button{
+    width: 64%;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 2px;
+    background-color: #007bff;
+    border: none;
+    color:aliceblue;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.button:disabled{
+    background-color: #bdbdbd;
+    color:#007bff;;
+
+}

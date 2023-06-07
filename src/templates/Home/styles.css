@@ -1,0 +1,10 @@
+.container {
+  min-height: 100 vh;
+  background: #eee;
+  padding: 20px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+
